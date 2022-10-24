@@ -2,6 +2,7 @@ package cn.com.xuxiaowei.springdoc.vo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -169,6 +170,7 @@ public class UsersVo implements Serializable {
 	 * 更新时间，未更新时为空
 	 */
 	@JsonProperty
+	@Schema(pattern = DEFAULT_DATE_TIME_FORMAT)
 	@JsonFormat(pattern = DEFAULT_DATE_TIME_FORMAT)
 	private LocalDateTime updateDate;
 
@@ -176,6 +178,7 @@ public class UsersVo implements Serializable {
 	 * 创建时间，不为空，数据库自动生成
 	 */
 	@JsonProperty
+	@Schema(pattern = DEFAULT_DATE_TIME_FORMAT)
 	@JsonFormat(pattern = DEFAULT_DATE_TIME_FORMAT)
 	private LocalDateTime createDate;
 
@@ -217,6 +220,7 @@ public class UsersVo implements Serializable {
 		 * 更新时间，未更新时为空
 		 */
 		@JsonProperty
+		@Schema(pattern = DEFAULT_DATE_TIME_FORMAT)
 		@JsonFormat(pattern = DEFAULT_DATE_TIME_FORMAT)
 		private LocalDateTime updateDate;
 
@@ -224,6 +228,7 @@ public class UsersVo implements Serializable {
 		 * 创建时间，不为空，数据库自动生成
 		 */
 		@JsonProperty
+		@Schema(pattern = DEFAULT_DATE_TIME_FORMAT)
 		@JsonFormat(pattern = DEFAULT_DATE_TIME_FORMAT)
 		private LocalDateTime createDate;
 
