@@ -91,6 +91,11 @@
                             <artifactId>therapi-runtime-javadoc-scribe</artifactId>
                             <version>${therapi-runtime-javadoc.version}</version>
                         </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.24</version>
+                        </path>
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
@@ -122,7 +127,6 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>generate-sources</phase>
                         <goals>
                             <goal>delombok</goal>
                         </goals>
