@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.5</version>
+        <version>3.0.0-RC1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.com.xuxiaowei</groupId>
@@ -14,7 +14,7 @@
     <name>springdoc</name>
     <description>springdoc</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
 
         <!-- https://mvnrepository.com/artifact/io.spring.javaformat/spring-javaformat-maven-plugin -->
         <!-- https://github.com/spring-io/spring-javaformat/ -->
@@ -24,9 +24,6 @@
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven-plugin -->
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
 
-        <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
-        <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-javadoc -->
-        <springdoc.version>1.6.12</springdoc.version>
         <!-- https://mvnrepository.com/artifact/com.github.therapi/therapi-runtime-javadoc -->
         <therapi-runtime-javadoc.version>0.15.0</therapi-runtime-javadoc.version>
 
@@ -36,18 +33,19 @@
     </properties>
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
+        <!-- 2.x 分支中的 org.springdoc:springdoc-openapi-starter-webmvc-ui 与 1.x 版本中的 org.springdoc:springdoc-openapi-ui 雷同 -->
         <dependency>
             <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-ui</artifactId>
-            <version>${springdoc.version}</version>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.0.0-RC1</version>
         </dependency>
         <!-- https://springdoc.org/#javadoc-support -->
         <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-javadoc -->
+        <!-- javadoc 不区分 JDK/Spring 版本 -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-javadoc</artifactId>
-            <version>${springdoc.version}</version>
+            <version>1.6.12</version>
         </dependency>
 
         <dependency>
@@ -164,5 +162,26 @@
 
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>

@@ -3,7 +3,6 @@ package cn.com.xuxiaowei.springdoc.bo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
