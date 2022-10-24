@@ -27,6 +27,8 @@
         <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
         <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-javadoc -->
         <springdoc.version>1.6.12</springdoc.version>
+        <!-- https://mvnrepository.com/artifact/com.github.therapi/therapi-runtime-javadoc -->
+        <therapi-runtime-javadoc.version>0.15.0</therapi-runtime-javadoc.version>
 
         <!-- 打包时跳过单元测试 -->
         <skipTests>true</skipTests>
@@ -40,17 +42,12 @@
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>${springdoc.version}</version>
         </dependency>
+        <!-- https://springdoc.org/#javadoc-support -->
         <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-javadoc -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-javadoc</artifactId>
             <version>${springdoc.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.therapi/therapi-runtime-javadoc -->
-        <dependency>
-            <groupId>com.github.therapi</groupId>
-            <artifactId>therapi-runtime-javadoc</artifactId>
-            <version>0.15.0</version>
         </dependency>
 
         <dependency>
@@ -78,6 +75,7 @@
     <build>
         <plugins>
 
+            <!-- https://springdoc.org/#javadoc-support -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -86,7 +84,7 @@
                         <path>
                             <groupId>com.github.therapi</groupId>
                             <artifactId>therapi-runtime-javadoc-scribe</artifactId>
-                            <version>0.15.0</version>
+                            <version>${therapi-runtime-javadoc.version}</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
