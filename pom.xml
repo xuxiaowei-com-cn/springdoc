@@ -37,18 +37,18 @@
     <dependencies>
 
         <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>${springdoc.version}</version>
-        </dependency>
+        </dependency>-->
         <!-- https://springdoc.org/#javadoc-support -->
         <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-javadoc -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-javadoc</artifactId>
             <version>${springdoc.version}</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -84,7 +84,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
+                <!--<configuration>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>com.github.therapi</groupId>
@@ -92,7 +92,7 @@
                             <version>${therapi-runtime-javadoc.version}</version>
                         </path>
                     </annotationProcessorPaths>
-                </configuration>
+                </configuration>-->
             </plugin>
 
             <plugin>
