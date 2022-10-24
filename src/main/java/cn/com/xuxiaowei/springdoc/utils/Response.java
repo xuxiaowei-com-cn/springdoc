@@ -99,6 +99,35 @@ public class Response<T> implements Serializable {
 	private T data;
 
 	/**
+	 * 防止出现一下错误
+	 * <p>
+	 * 推测可能的原因是 springdoc 执行的优先级高于 lombok
+	 * <code>
+	 * E:\\IdeaProjects\\springdoc\\src\\main\\java\\cn\\com\\xuxiaowei\\springdoc\\utils\\Response.java:60:17
+	 * java: 找不到符号
+	 *   符号:   方法 setData(T)
+	 *   位置: 类型为cn.com.xuxiaowei.springdoc.utils.Response<T>的变量 response
+	 * </code>
+	 */
+	public void setData(T data) {
+		this.data = data;
+	}
+
+	/**
+	 * 防止出现一下错误
+	 * <p>
+	 * 推测可能的原因是 springdoc 执行的优先级高于 lombok
+	 * <code>
+	 * E:\\IdeaProjects\\springdoc\\src\\main\\java\\cn\\com\\xuxiaowei\\springdoc\\utils\\ResponseMap.java:71:40
+	 * java: 找不到符号
+	 *   符号: 方法 getData()
+	 * </code>
+	 */
+	public T getData() {
+		return data;
+	}
+
+	/**
 	 * 错误字段
 	 * <p>
 	 * 存在多个时，使用英文逗号隔开
