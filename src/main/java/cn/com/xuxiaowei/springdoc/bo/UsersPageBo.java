@@ -1,6 +1,5 @@
 package cn.com.xuxiaowei.springdoc.bo;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
@@ -20,13 +19,11 @@ public class UsersPageBo implements Serializable {
 	/**
 	 * 当前页
 	 */
-	@JsonProperty
 	private Long current;
 
 	/**
 	 * 分页条数
 	 */
-	@JsonProperty
 	private Long size;
 
 }
