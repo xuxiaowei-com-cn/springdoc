@@ -32,20 +32,15 @@
     </properties>
     <dependencies>
 
-        <!-- 2.x 分支中的 org.springdoc:springdoc-openapi-starter-webmvc-ui 与 1.x 版本中的 org.springdoc:springdoc-openapi-ui 雷同 -->
+        <!--
+            https://springdoc.org/v2/#migrating-from-springdoc-v1
+            2.x 分支中的 org.springdoc:springdoc-openapi-starter-webmvc-ui 与 1.x 版本中的 org.springdoc:springdoc-openapi-ui 雷同
+         -->
         <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.0.2</version>
-        </dependency>
-        <!-- https://springdoc.org/#javadoc-support -->
-        <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-javadoc -->
-        <!-- javadoc 不区分 JDK/Spring 版本 -->
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-javadoc</artifactId>
-            <version>1.6.14</version>
         </dependency>
 
         <dependency>
